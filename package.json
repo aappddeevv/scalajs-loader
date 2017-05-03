@@ -4,6 +4,7 @@
   "author": "Matt Dziuban",
   "description": "Scala.js loader module for webpack",
   "dependencies": {
+    "loader-utils": "^1.1.0"
   },
   "repository": {
     "type": "git",
