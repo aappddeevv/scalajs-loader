@@ -18,13 +18,13 @@ module.exports = function(source) {
       const outDir = path.join(self.options.context, 'target', `scala-${scalaVersion}`);
 
       const modName = JSON.parse(readFileSync(path.join(outDir, 'classes', 'JS_DEPENDENCIES')).toString()).origin.moduleName;
-      const outFile = path.join(path.join(outDir, dirSegment), `${modName}-${stageFileSegment}.js`);
-      const outFileBasename = path.basename(outFile);
+      const jsBasename = `${modName}-${stageFileSegment}.js`;
+      const outFile = path.join(outDir, dirSegment, jsBasename);
     callback(
       null,
       readFileSync(outFile).toString().replace(
-        new RegExp(`\\n\/\/# sourceMappingURL=${modName}-${stageFileSegment}\.js\.map`),
-        `\n//# sourceMappingURL=${outFileBasename}.map`
+        new RegExp(`\/\/# sourceMappingURL=${modName}-${stageFileSegment}\\.js\\.map`),
+        `//# sourceMappingURL=${outFile}.map`
       )
     );
   });
