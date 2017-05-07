@@ -40,7 +40,8 @@ Options can be provided to specify the scalajs stage, fullOptJS or fastOptJS.
   test: /\.scala$/,
   loader: 'scaljs-loader',
   options: { 
-    jsStage: 'fullOptJS'
+    jsStage: 'fullOptJS',
+    clean: true
   }
 }
 ```
