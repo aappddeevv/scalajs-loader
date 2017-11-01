@@ -1,14 +1,15 @@
 {
-  "name": "scalajs-loader",
+  "name": "@aappddeevv/scalajs-loader",
   "version": "0.0.2",
-  "author": "Matt Dziuban",
+  "author": "aappddeevv",
   "description": "Scala.js loader module for webpack",
   "dependencies": {
     "loader-utils": "^1.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mrdziuban/scalajs-loader"
+    "url": "git@github.com:aappddeevv/scalajs-loader"
   },
   "license": "MIT"
+  ,"keywords": ["scalajs", "scala", "webpack"]
 }

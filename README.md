@@ -1,6 +1,8 @@
 # Scala.js Webpack loader
 
-[![npm](https://img.shields.io/npm/v/scalajs-loader.svg)](https://www.npmjs.com/package/scalajs-loader)
+[![npm](https://img.shields.io/npm/v/scalajs-loader.svg)](https://www.npmjs.com/package/@aappddeevv/scalajs-loader)
+
+This is an updated version from [https://github.com/mrdziuban/scalajs-loader](https://github.com/mrdziuban/scalajs-loader).
 
 ### Usage
 
@@ -48,3 +50,13 @@ Options can be provided to specify the scalajs stage, fullOptJS or fastOptJS.
 An additional option `dirSegment` appends a directory segment after the standard
 scalajs target output directory (such as target/scala-2.12) in case you are
 using a sbt plugin like scalajs-bundler that alters the output directory.
+
+To reduce build times, you may want to keep `clean: false` for dev work and run
+clean only for the production build.
+
+All options:
+* verbose: Print messages during processing.
+* clean: Clean prior to build.
+* dirSegment: Directory segment inserted into the constructed path to find the .js file.
+* removeSoruceMapUrl: Remove the source map URL.
+* jsStage: "fastOptJS" or or "opt"
